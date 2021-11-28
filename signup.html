@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style >
+		body
+		{
+			background-image: url('signup.png');
+			font-family: 'Roboto', sans-serif;
+		}
+		.signup-box
+		{
+			width: 380px;
+			height: 550px;
+			margin: auto;
+			margin-top: 150px;
+			background-color: #B3D5D7;
+
+			border-radius: 15px;
+			margin-right: 110px;
+		}
+		.center
+		{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+
+		}
+		h1
+		{
+			text-align: center;
+			padding-top: 30px;
+
+		}
+		h4
+		{
+			text-align: center;
+		}
+		form
+		{
+			width: 300px;
+			margin-right: 20px;
+			margin-left: 30px;
+			text-align: center;
+		}
+		form label
+		{
+			display: flex;
+			margin-top: 20px;
+			font-size: 18px;
+
+		}
+		form input
+		{
+			width: 100%;
+			padding: 8px;
+			border: none;
+			border: 1px solid gray;
+			border-radius: 14px;
+			outline: none;
+
+		}
+		input[type="submit"]
+		{
+			width: 320px;
+			height: 35px;
+			margin-top: 20px;
+			border: none;
+			background-color: #1D696E;
+			color: black;
+			font-size: 18px;
+		}
+		p
+		{
+			text-align: left;
+
+			padding-top: 20px;
+		    font-size: 15px;
+
+		}
+		.para-2
+		{
+			margin-right: 180px;
+			text-align: right;
+			color: white;
+			font-size: 15px;
+			margin-top: -10px;
+		}
+		.para-2 a{
+			color: #49c1a2;
+		}
+	</style>
+	<style class="index">
+	body{
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	ul
+{
+	margin-top: -100px;
+	float: right;
+	list-style-type: none;
+	margin-right: 90px;
+}
+ul li
+{
+	display: inline-block;
+
+}
+ul li.active a
+{
+	background-color: black;
+	color: #5A450D;
+}
+ul li a
+{
+
+	margin-top: 0px;
+	text-decoration: none;
+	color: grey;
+	padding: 5px 20px;
+	border: 1px darkslategrey;
+	transition: 0.5s ease;
+}
+ul li a:hover
+{
+	background-color: black;
+	color: #5A450D;
+	transition: 0.5s ease;
+}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="index">
+	<ul>
+ 	<li style="float: right;">
+ 		<li style="display: inline;" style="float: right;"><a href="index.html">HOME</a></li>
+ 		<li style="display: inline;" style="float: right;"><a href="movies.html">MOVIES</a></li>
+ 		<li style="display: inline;" style="float: right;"><a href="books.html">BOOKS</a></li>
+ 		<li style="display: inline;" style="float: right;"><a href="rating.html">RATE US</a></li>
+ 		<li style="display: inline;" style="float: right; "class="active"><a href="login.html">LOG IN</a></li>
+ 	</li>
+ 	</ul>
+ </div>
+	<div class="signup-box">
+		<h1>Sign Up</h1>
+		<form>
+			<label>First Name</label>
+			<input type="text" placeholder="">
+			<label>Last Name</label>
+			<input type="text" placeholder="">
+			<label>Email</label>
+			<input type="email" placeholder="">
+			<label>Password</label>
+			<input type="password" placeholder="">
+			<label>Confirm Password</label>
+			<input type="password" placeholder="">
+			<input type="submit" value="Submit">
+		</form>
+
+	</div>
+	<p class="para-2">Already have an account? <a href="login.html"><i><b>Log In</b></i></a></p>
+
+</body>
+</html>
