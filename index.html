@@ -130,4 +130,29 @@ h2
  
 
 </body>
+<script >
+       var today = new Date();
+       var now = today.getHours();
+       var greeting;
+       if(now>16&&now<23)
+       {
+            greeting = "Good Evening!";
+       }
+       else if(now>=12&&now<=16)
+       {
+          greeting = "Good Afternoon!"; 
+       }
+       else if(now>6&&now<12)
+       {
+          greeting = "Good Morning!"; 
+       }
+       else
+       {
+          greeting = "Hello!"; 
+       }
+       document.write("<h2>"+greeting+"</h2>");
+       alert(greeting);
+    </script>
+</head>
+
 </html>
