@@ -10,7 +10,7 @@
 			background-image: url('images/background2.jpg');
   			background-repeat: no-repeat;
   			background-attachment: fixed;
-  			background-size: 100% 100%;	
+  			background-size: 100% 100%;
 		}
 		th,td
 		{
@@ -25,32 +25,33 @@
 		}
 		table,tr,th
 		{
-			
-			
+			background-origin: content-box;
+			background-size: contain;
+			box-shadow: -5px 5px 5px;
 			padding: 5px  40px;
 			font-size: 25px;
 			margin-left: 30px;
-			
+
 			margin-top: 80px;
 		}
-		td 
+		td
 		{
 			border: none;
-			
+
 			text-align: center;
 		}
-		img 
+		img
 		{
 			width: 200px;
 			height: 300px;
 			margin: 10px;
-		
+
 		}
 		img:hover
 		{
 			transform: scale(1.5,1.5);
 		}
-		a 
+		a
 		{
 			color: whitesmoke;
 		}
@@ -62,7 +63,7 @@
 			color: whitesmoke;
 		}
 
-		ol 
+		ol
 		{
 			margin-left: -18px;
 			font-size: 20px;
@@ -100,9 +101,9 @@
 			display: flex;
 			flex: 1;
 			width: 100%;
-			
+
 		}
-		.lists .list 
+		.lists .list
 		{
 			margin-left: 30%;
 			border-radius: 15px;
@@ -141,14 +142,30 @@
 			width: 400px;
 			height: 300px;
 		}
+			form
+		 {
+		 	position: absolute;
+		 	margin-left: 1000px;
+		 	margin-top: -50px;
+
+		}
+		input
+		{
+			width: 190px;
+		}
 	</style>
 	</head>
 	<body>
 	<h1>ANIMATION MOVIES</h1>
+	<form>
+	<label for="search"></label>
+	<input type="search" id="search" placeholder="What do you want to watch?">
+	<button>Search</button>
+</form>
 	<a href="movies.html" id="a"><i><b>Back</b></i></a>
 	<h3>Rank these movies by your preferences (by dropping them in the empty box)</h3>
 		<div class="app">
-			
+
 			<div class="lists">
 				<div class="list">
 					<div class="list-item" draggable="true">The Boss Baby</div>
@@ -156,10 +173,10 @@
 					<div class="list-item" draggable="true">Lion King</div>
 				</div>
 				<div class="list"></div>
-				
+
 			</div>
 		</div>
-	
+
 		<div class="video">
 			<h3>Top 5 Best Animated Movies 2021</h3>
 			<video autoplay controls>
@@ -381,7 +398,7 @@
 		</td>
 	</tr>
 	</table>
-	
+
 </body>
 <script src="script.js"></script>
 
