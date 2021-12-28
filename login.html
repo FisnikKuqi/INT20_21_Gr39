@@ -9,7 +9,6 @@
 		body
 		{
 			background-image: url('images/signup.png');
-			font-family: 'Roboto', sans-serif;
 		}
 		
 		.login-box
@@ -21,16 +20,27 @@
 			background-color: #B3D5D7;
 
 			border-radius: 15px;
-			margin-right: 110px;
+			margin-right: 170px;
+			transition:transform 1s ease-in-forwards ;
+		}
+		body:hover .login-box 
+		{
+			animation: left-to-right 1s ease-in;
+		}
+		@keyframes left-to-right{
+			0%
+			{ transform: translateX(0); }
+			15%
+			{transform: translateY(100px);}
+			33%
+			{transform: translateX(50%) translateY(100px);}
+			50%
+			{transform: translateX(50%);}
 		}
 		h1
 		{
 			text-align: center;
 			padding-top: 15px;
-		}
-		h4
-		{
-			text-align: center;
 		}
 		form
 		{
@@ -51,7 +61,7 @@
 			border-radius: 6px;
 			
 		}
-		input[type="button"]
+		input[type="submit"]
 		{
 			width: 320px;
 			height: 35px;
@@ -64,18 +74,20 @@
 		{
 			text-align: center;
 			padding-top: 20px;
-		    font-size: 15px;
-
+		    font-size: 15px;	
 		}
 		.para-2
 		{
+
 			text-align: right;
 			color: white;
 			font-size: 15px;
 			margin-top: -10px;
-			margin-right: 180px;
+			margin-right: 250px;
+			
 		}
-		.para-2 a{
+		.para-2 a
+		{
 			color: #49c1a2;
 		}
 	</style>
@@ -135,11 +147,11 @@ ul li a:hover
 	<div class="login-box">
 		<h1>Log In</h1>
 		<form>
-			<label>Email</label>
+			<label>Emaili</label>
 			<input type="email" placeholder="">
 			<label>Password</label>
 			<input type="password" placeholder="">
-			<input type="button" value="Submit">
+			<input type="submit" value="Submit">
 		</form>
 	</div>
 	<p class="para-2">Don't have an account? <a href="signup.html"><i><b>Sign Up</b></i></a></p>
