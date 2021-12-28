@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<title>Books and Movies reviews</title>
 	<style>
 body {
@@ -13,6 +15,8 @@ body {
   background-size: 100% 100%;
 
 }
+p{
+	font-family: 'Smooch', cursive;}
 ul
 {
 	margin-top: -40px;
@@ -66,7 +70,12 @@ dl
 	margin-left: 10px;
 	border: 4px solid darkslategrey;
 	padding: 10px;
-
+ 	transition: width 5s, height 5s;
+}
+dl:hover
+{
+	width: 200px;
+	height: 150px;
 }
 dd ,a
 {
@@ -79,6 +88,17 @@ p,address
 	margin-top: 510px;
 	color: whitesmoke;
 
+}
+h2
+{
+	margin-top:100px;
+	text-align: center;
+	outline-color: black;
+	outline-offset: 5px;
+	width: 200px;
+	outline: 1px solid;
+	margin-left: 43%;
+	color: whitesmoke;
 }
 
 	</style>
