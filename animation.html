@@ -46,6 +46,10 @@
 			margin: 10px;
 		
 		}
+		img:hover
+		{
+			transform: scale(1.5,1.5);
+		}
 		a 
 		{
 			color: whitesmoke;
@@ -75,16 +79,93 @@
 				background-color: slategray;
 
 			}
+		#a:hover
+		{
+			transform: skew(45deg);
+		}
 			a
 			{
 				text-decoration: none;
 			}
+		h3
+		{
+			margin-left: 20px;
+			margin-top: 70px;
+			color: white;
+			display: flex;
+			height: 10px;
+		}
+		.lists
+		{
+			display: flex;
+			flex: 1;
+			width: 100%;
+			
+		}
+		.lists .list 
+		{
+			margin-left: 30%;
+			border-radius: 15px;
+			display: flex;
+			flex-flow: column;
+			flex: 1;
 
+			width: 70%;
+			min-width: 250px;
+			max-width: 350px;
+			height: 90%;
+			min-height: 150px;
+
+			background-color: #B772E4;
+			margin: 0 15px;
+			padding: 8px;
+			transition: all 0.2s linear;
+		}
+		.lists .list .list-item
+		{
+			background-color: whitesmoke;
+			border-radius: 8px;
+			padding: 15px 20px;
+			text-align: center;
+			margin: 4px 0;
+		}
+		.video
+		{
+
+			margin-left: 60%;
+			margin-top: -270px;
+		}
+		video
+		{
+			margin-top: -10px;
+			width: 400px;
+			height: 300px;
+		}
 	</style>
 	</head>
 	<body>
 	<h1>ANIMATION MOVIES</h1>
 	<a href="movies.html" id="a"><i><b>Back</b></i></a>
+	<h3>Rank these movies by your preferences (by dropping them in the empty box)</h3>
+		<div class="app">
+			
+			<div class="lists">
+				<div class="list">
+					<div class="list-item" draggable="true">The Boss Baby</div>
+					<div class="list-item" draggable="true">Despicable Me</div>
+					<div class="list-item" draggable="true">Lion King</div>
+				</div>
+				<div class="list"></div>
+				
+			</div>
+		</div>
+	
+		<div class="video">
+			<h3>Top 5 Best Animated Movies 2021</h3>
+			<video autoplay controls>
+				<source src="videos/videoplayback.mp4" type="video/mp4">
+			</video>
+		</div>
 	<table>
 	<tr>
 		<th>TITLE</th>
@@ -302,4 +383,6 @@
 	</table>
 	
 </body>
+<script src="script.js"></script>
+
 </html>
