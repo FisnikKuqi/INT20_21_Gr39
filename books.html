@@ -7,8 +7,15 @@
 	<title>Books and movies reviews</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
+<script>
+$(document).ready(function(){
+  $(".butoni1").click(function(){
+    $("#book").hide();
+  });
+});
+</script>
 
 
 	<style>
@@ -71,7 +78,9 @@ td
 p 
 {
 	color: white;
-
+	column-count: 2;
+	column-gap: 10px;
+  column-rule: 0px outset #00ffee;
 }
 .titull
 {
@@ -144,17 +153,52 @@ form
 	background-color:grey;
 	padding: 3px;
 }
+#hide
+{
+	position: fixed;
+	margin-top: -30px;
+}
+#show
+{
+	position: fixed;
+	margin-top: 10px;
 
-	</style>
+}
+#submit
+{
+	color: black;
+	background-color: whitesmoke;
+	border-radius: 3px;
+	padding: 3px;
+}
 
+</style>
 
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#book").hide();
+    alert("Icon is hidden");
+  });
+});
 
-
+$(document).ready(function(){
+  $("#show").click(function(){
+    $("#book").show();
+    alert("Icon is shown");
+  });
+});
+</script>
 
 
 
 </head>
 <body background="libra.jpg">
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+	
 	<p id="book"><abbr title="Books & movies">B & M </abbr><br>REVIEWS</p>
 	<div> <ul>
  	<li style="float: right;">
@@ -190,9 +234,27 @@ form
     <option value="18">
     <option value="19">
   </datalist>
-  <input type="submit">
+  <input type="button" id="submit" onclick="myFunction()" value="Submit">
+  <p id="message"></p>
 </form>
 
+<script>
+function myFunction() {
+  const message = document.getElementById("message");
+  message.innerHTML = "";
+  let x = document.getElementById("favbook").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    
+    if(x > 19)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
 
 <table class="table-striped">
     <tr  class="bg-info">
@@ -383,6 +445,7 @@ Loved this book. One of my favorites. I really don't understand why this book do
 
 
 </body>
+
 	<script src="main.js"></script>
 	<script >
 var myArray = [
