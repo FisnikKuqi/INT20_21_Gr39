@@ -1,236 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<style >
-		body
-		{
-			margin-top: 200px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			min-height: 100px;
-			align-items: center;
-			background: #20152d;
-		}
-		.rating
-		{
-			margin-left: -400px;
-			width: 600px;
-			height: 300px;
-			margin-top: 50px;
-			background-color: #C9E7E9;
-			border-radius: 14px;
-			align-items: center;
-			position: relative;
-			display: flex;
-			flex-direction: row-reverse;
-			text-align: center;
-		}
-		.rating input
-		{
-			display: none;
-		}
-		.rating label
-		{
-			align-items: center;
-			position: relative;
-			width: 0px;
-			height: 128px;
-			cursor: pointer;
-			transition: 0.5s;
-			filter: grayscale(0);
-			opacity: 0;
-			text-align: center;
-		}
-		.rating:hover label
-		{
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
 
-			width: 120px;
-			opacity: 0.3;
-		}
-		.rating input:hover + label,
-		.rating input:checked + label
-		{
-			align-items: center;
-			filter: grayscale(0);
-			opacity: 1;
-			width: 160px;
-		}
-		.rating label h4 h6
-		{
-			color: black;
-			font-size: 24px;
-			padding-top: -20px;
-			font-weight: 500;
-			white-space: nowrap;
-			opacity: 0;
-			transform: translateY(-50px)scale(0);
-			transition: 2s;
-		}
-		.rating input:hover + label h4 ,
-		.rating input:checked + label h4 
-		{
-			opacity: 1;
-			transform: translateY(0) scale(1);
-
-		}
-		.text
-		{
-			position: absolute;
-			top: -90px;
-			left: 50%;
-			transform: translateX(-50%);
-			color: #fff;
-			width: 500px;
-			font-weight: 700;
-			letter-spacing: 2px;
-			text-align: center;
-			white-space: nowrap;
-			font-size: 36px;
-		}
-		input[type="submit"]
-		{
-			border-radius: 10px;
-			width: 280px;
-			height: 30px;
-			margin-top: -30px;
-			border: none;
-			background-color: #468A8F;
-			color: white;
-			font-size: 18px;
-		}
-		img
-		{
-			width: 100px;
-			height: 100px;
-			margin: 10px;
-			
-		}
-	</style>
-	<style class="index">
-	body{
-		background-image: url('rate.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	ul
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $(".textarea").click(function(){
+    $(".textarea").animate({
+      height: '+=50px',
+      width: '+=50px'
+    });
+  });
+});
+</script> 
+<style >
+body
 {
-	margin-top: -340px;
-	float: right;
-	list-style-type: none;
-	margin-right: -1090px;
+margin-top: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.rating
+{
+margin-left: -400px;
+width: 600px;
+height: 300px;
+margin-top: 50px;
+background-color: #C9E7E9;
+border-radius: 14px;
+align-items: center;
+position: relative;
+display: flex;
+flex-direction: row-reverse;
+text-align: center;
+transform: translateY(50px,50px);
+}
+.rating input
+{
+display: none;
+}
+.rating label
+{
+align-items: center;
+position: relative;
+width: 0px;
+height: 128px;
+cursor: pointer;
+transition: 0.5s;
+filter: grayscale(0);
+opacity: 0;
+text-align: center;
+}
+.rating:hover label
+{
+width: 120px;
+opacity: 0.3;
+}
+.rating input:hover + label,
+.rating input:checked + label
+{
+align-items: center;
+filter: grayscale(0);
+opacity: 1;
+width: 160px;
+}
+.rating label h4 
+{
+color: black;
+font-size: 24px;
+padding-top: -20px;
+opacity: 0;
+transition: 2s;
+}
+.rating input:hover + label h4 ,
+.rating input:checked + label h4
+{
+opacity: 1;
+}
+#text
+{
+position: absolute;
+top: -90px;
+color: #fff;
+letter-spacing: 2px;
+font-size: 36px;
+}
+img
+{
+width: 100px;
+height: 100px;
+margin: 10px;
+}
+</style>
+<style class="index">
+body{
+background-image: url('images/rate.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+ul
+{
+margin-top: -340px;
+float: right;
+list-style-type: none;
+margin-right: -1090px;
 }
 ul li
 {
-	display: inline-block;
-
+display: inline-block;
 }
 ul li.active a
 {
-	background-color: black;
-	color: #5A450D;
+background-color: black;
+color: #5A450D;
 }
 ul li a
 {
-
-	margin-top: 0px;
-	text-decoration: none;
-	color: grey;
-	padding: 5px 20px;
-	border: 1px darkslategrey;
-	transition: 0.5s ease;
+margin-top: 0px;
+text-decoration: none;
+color: grey;
+padding: 5px 20px;
+border: 1px darkslategrey;
+transition: 0.5s ease;
 }
 ul li a:hover
 {
-	background-color: black;
-	color: #5A450D;
-	transition: 0.5s ease;
+background-color: black;
+color: #5A450D;
+transition: 0.5s ease;
 }
+</style>
+<style class="message">
+.message
+{
+text-align: center;
+margin-left: 30px;
+width: 400px;
+height: 250px;
+margin-top: 100px;
+background-color: #C9E7E9;
+border-radius: 14px;
+align-items: center;
+}
+.input
+{
+width: 100px;
+height: 30px;
+}
+input[type="submit"]
+{
+border-radius: 10px;
+width: 280px;
+height: 30px;
+margin-top: -30px;
+border: none;
+background-color: #468A8F;
+color: white;
+font-size: 18px;
+}	
+#replace
+{
+  position: absolute;
+  margin-top: -290px;
+  margin-left: -1270px;
+  padding: 6px;
+  background-color: lightblue;
+  border-radius: 4px;
+  border: none;
 
-	</style>
-	<style class="message">
-		.message
-		{ 
-			text-align: center;
-			margin-left: 30px;
-			width: 400px;
-			height: 250px;
-			margin-top: 100px;
-			background-color: #C9E7E9;
-			border-radius: 14px;
-			align-items: center;
-		}
-		.input
-		{
-			width: 100px;
-			height: 30px;
-		}
-		input[type="button"]
-		{
-			width: 320px;
-			height: 35px;
-			margin-top: 20px;
-			border: none;
-			background-color: gray;
-			color: white;
-			font-size: 18px;
-		}
-	</style>
-	</head>
+  }
+
+</style>
+<script>
+function myFunction() {
+  let text = document.getElementById("text").innerHTML;
+  document.getElementById("text").innerHTML =
+  text.replace("Do you like our website?","Thank You!");
+}
+</script>
+</head>
 <body>
-	<div class="index">
-	<ul>
- 	<li style="float: right;">
- 		<li style="display: inline;" style="float: right;"><a href="index.html">HOME</a></li>
- 		<li style="display: inline;" style="float: right;"><a href="movies.html">MOVIES</a></li>
- 		<li style="display: inline;" style="float: right;"><a href="books.html">BOOKS</a></li>
- 		<li style="display: inline;" style="float: right;"class="active"><a href="rate.html">RATE US</a></li>
- 		<li style="display: inline;" style="float: right;"><a href="login.html">LOG IN</a></li>
- 	</li>
- 	</ul>
- </div>
-	<div class="rating">
-		<h4 class="text">Do you like our website?</h4>
-		<input type="radio" name="star" id="star1" checked="checked">
-		<label for="star1">
-			<img src="1.png">
-			<h4>Loved it</h4>
-		</label>
-		<input type="radio" name="star" id="star2">
-		<label for="star2">
-			<img src="2.png">
-			<h4>Liked it</h4>
-		</label>
-		<input type="radio" name="star" id="star3">
-		<label for="star3">
-			<img src="3.png">
-			<h4>It's OK</h4>
-		</label>
-		<input type="radio" name="star" id="star4">
-		<label for="star4">
-			<img src="4.png">
-			<h4>Dislike it</h4>
-		</label>
-		<input type="radio" name="star" id="star5">
-		<label for="star5">
-			<img src="5.png">
-			<h4>Hated it</h4>
-			</label>
-			<br>
-		<input type="submit" value="Submit">
-		<br>
-		
-		
-	</div>
-	<div class="message">
-		<form>
-			<h3>Give us a Feedback!</h3>
-			<textarea name="message" rows="7" cols="30" placeholder="type your message here"></textarea><br><br><br>
-			<input type="submit" value="Send Message">
-		</form>
-	</div>
+<div class="index">
+<ul>
+<li style="float: right;">
+<li style="display: inline;" style="float: right;"><a href="index.html">HOME</a></li>
+<li style="display: inline;" style="float: right;"><a href="movies.html">MOVIES</a></li>
+<li style="display: inline;" style="float: right;"><a href="books.html">BOOKS</a></li>
+<li style="display: inline;" style="float: right;"class="active"><a href="rate.html">RATE US</a></li>
+<li style="display: inline;" style="float: right;"><a href="login.html">LOG IN</a></li>
+</li>
+</ul>
+</div>
+
+ <button id="replace" onclick="myFunction()">Click here after rating!</button>
+
+<div class="rating">
+<h4 id="text">Do you like our website?</h4> 
+<input type="button" name="">
+<input type="radio" name="star" id="star1" checked="checked">
+<label for="star1">
+<img src="images/1.png">
+<h4>Loved it</h4>
+</label>
+<input type="radio" name="star" id="star2">
+<label for="star2">
+<img src="images/2.png">
+<h4>Liked it</h4>
+</label>
+<input type="radio" name="star" id="star3">
+<label for="star3">
+<img src="images/3.png">
+<h4>It's OK</h4>
+</label>
+<input type="radio" name="star" id="star4">
+<label for="star4">
+<img src="images/4.png">
+<h4>Dislike it</h4>
+</label>
+<input type="radio" name="star" id="star5">
+<label for="star5">
+<img src="images/5.png">
+<h4>Hated it</h4>
+</label>
+
+</div>
+<div class="message">
+<form>
+<h3>Give us a Feedback!</h3>
+<textarea class="textarea" name="message" rows="7" cols="30" placeholder="type your message here"></textarea><br><br><br>
+<input class="submit" type="submit" value="Send Message">
+</form>
+</div>
 </body>
 </html>
