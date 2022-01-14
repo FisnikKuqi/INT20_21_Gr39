@@ -5,10 +5,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Books and Movies reviews</title>
+	<canvas id="myCanvas" width="560" height="100"
+	    style="border:1px solid #d3d3d3;">
+	    </canvas> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+	    <script>
+	    var canvas = document.getElementById("myCanvas");
+	    var ctx = canvas.getContext("2d");
+	    ctx.font = "30px Arial";
+	    ctx.strokeText("Welcome to Books and Movies reviews",10,60);
+	    </script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+
 	<style>
+		#panel, #flip {
+margin-top: 290px;
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  width: 300px;
+  margin-left: 75%;
+}
+
+#panel {
+	margin-top: 0px;
+  padding: 10px;
+  display: none;
+  width:290px;
+  height: px;
+
+}
+
 body {
-  
+
   background-image: url('images/a.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,7 +57,7 @@ p{
 	font-family: 'Smooch', cursive;}
 ul
 {
-	margin-top: -40px;
+	margin-top: -280px;
 	float: right;
 	list-style-type: none;
 	margin-right: 0px;
@@ -27,6 +65,7 @@ ul
 ul li
 {
 	display: inline-block;
+
 
 }
 ul li.active a
@@ -43,6 +82,7 @@ ul li a
 	padding: 5px 20px;
 	border: 1px darkslategrey;
 	transition: 0.5s ease;
+
 }
 ul li a:hover
 {
@@ -57,45 +97,75 @@ h1
 	color: darkgrey;
 	margin-left: 30px;
 }
-a 
+a
 {
 	text-decoration: none;
 	color: black;
 }
 dl
 {
+	background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
 	float: left;
-	margin-top: 400px;
+	margin-top: 280px;
 	color: whitesmoke;
 	margin-left: 10px;
 	border: 4px solid darkslategrey;
 	padding: 10px;
- 	transition: width 5s, height 5s;
+
 }
-dl:hover
-{
-	width: 200px;
-	height: 150px;
-}
+
 dd ,a
 {
 	color: lightgrey;
 }
 
-p,address
+p
 {
 	float: right;
-	margin-top: 510px;
+	margin-top: 100px;
+	color: whitesmoke;
+	margin-right: -120px;
+}
+h2
+{
+
+	margin-top:-400px;
+	text-align: center;
+	outline-offset: 5px;
+	width: 200px;
+	outline: 1px solid;
+	margin-left: 43%;
 	color: whitesmoke;
 
 }
-
+#buttoni
+{
+	margin-top: 0px;
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  width: 300px;
+  margin-left: 75%;
+}
+#demo
+{
+	position: absolute;
+	margin-top: -70px;
+	margin-left: 1000px;
+}
+#demo1
+{
+	margin-right: 20px;
+	margin-top: 0px;
+}
 
 	</style>
 
 </head>
 <body >
-<h1>Welcome to <i>Books & Movies reviews</i></h1>
+
+
  <ul>
  	<li style="float: right;">
  		<li style="display: inline;" style="float: right;" class="active"><a href="index.html">HOME</a></li>
@@ -109,15 +179,40 @@ p,address
  	<dl>
  		<dt>Contact us by</dt>
  		<dt>Email:</dt>
- 				
+
  					<dd><a href="mailto:arbenite.musaj@student.uni-pr.edu">Arbenit&euml; Musaj</a></dd>
  					<dd><a href="mailto:fisnik.kuci@student.uni-pr.edu">Fisnik Ku&ccedil;i</a></dd>
  					<dd><a href="mailto:albin.demukaj@student.uni-pr.edu">Albin Demukaj</a></dd>
  	</dl>
- 	<p><address>FIEK,Prishtine</address></p>
 
- 	
- 
+
+<div id="flip">Click to slide address down or up</div>
+<div id="panel">FIEK,Prishtine</div>
+<button id="buttoni" onclick="getLocation()">Click here to get your geolocation</button>
+<p id="demo"></p>
+<p id="demo1"></p>
 
 </body>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<script>
+const d = new Date();
+document.getElementById("demo1").innerHTML = d;
+</script>
+
+
 </html>
