@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Books and Movies reviews</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+	
 	<style>
 body {
 
@@ -22,7 +24,6 @@ body {
 ul li
 {
 	display: inline-block;
-
 }
 ul li.active a
 {
@@ -44,7 +45,7 @@ ul li a:hover
 	color: #5A450D;
 	transition: 0.5s ease;
 }
-p
+#p
 {
 	font-size: 20px;
 	color: darkgrey;
@@ -71,17 +72,30 @@ td
 	padding: 5px;
 	width: 20px;
 	text-align: center;
-	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);}
+	background: linear-gradient(to left, #3f87a6, #ebf8e1, #f69d3c);}
 td,a
 {
 	text-decoration: none;
 	color: black;
 }
+#fade
+{
+	margin-left: 55px;
+	background-color: lightblue;
+	padding: 2px;
+}
+p
+{
+	color: white;
+}
+
+
 	</style>
 </head>
 <body >
 
-<p><i>CHOOSE A CATEGORY:</i></p>
+<p id="p"><i>CHOOSE A CATEGORY:</i></p>
+<button id="fade">Click to fade in/out boxes</button>
  <ul>
  	<li style="float: right;">
  		<li style="display: inline;" style="float: right;"><a href="index.html">HOME</a></li>
@@ -92,15 +106,29 @@ td,a
  	</li>
  	</ul>
  	<table style="width: 50%;">
- 		<td style="width:17%"><a href="action.html">ACTION</a></td>
- 		<td style="width:17%"><a href="drama.html">DRAMA</a></td>
- 		<td style="width:17%"><a href="comedy.html">COMEDY</a></td>
- 		<td style="width:17%"><a href="horror.html">HORROR</a></td>
- 		<td style="width:17%"><a href="romantic.html">ROMANTIC</a></td>
- 		<td style="width:17%"><a href="animation.html">ANIMATION</a></td>
- 		<td style="width:17%"><a href="series.html">SERIES</a></td>
+ 		<td style="width:17%" id="td"><a href="action.html">ACTION</a></td>
+ 		<td style="width:17%" id="td1"><a href="drama.html">DRAMA</a></td>
+ 		<td style="width:17%" id="td2"><a href="comedy.html">COMEDY</a></td>
+ 		<td style="width:17%" id="td3"><a href="horror.html">HORROR</a></td>
+ 		<td style="width:17%" id="td4"><a href="romantic.html">ROMANTIC</a></td>
+ 		<td style="width:17%" id="td5"><a href="animation.html">ANIMATION</a></td>
+ 		<td style="width:17%" id="td6"><a href="series.html">SERIES</a></td>
  	</table>
 </header>
 </body>
-</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+  $("#fade").click(function(){
+    $("#td").fadeToggle(2000);
+    $("#td1").fadeToggle(2000);
+    $("#td2").fadeToggle(2000);
+    $("#td3").fadeToggle(2000);
+    $("#td4").fadeToggle(2000);
+    $("#td5").fadeToggle(2000);
+    $("#td6").fadeToggle(2000);
+    
+  });
+});
+</script>
 
+</html>
